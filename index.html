@@ -12,10 +12,19 @@
 
     <form id="todo-form" class="todo-form">
       <input id="todo-input" type="text" placeholder="What needs to be done?" autocomplete="off" />
+      <input id="todo-date" type="date" aria-label="Due date" />
       <button type="submit">Add</button>
     </form>
 
+    <nav class="filters" id="filters">
+      <button type="button" class="filter-btn active" data-filter="all">All</button>
+      <button type="button" class="filter-btn" data-filter="active">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+    </nav>
+
     <ul id="todo-list" class="todo-list"></ul>
+
+    <p id="empty-message" class="empty-message" hidden>Nothing here yet.</p>
 
     <footer class="todo-footer">
       <span id="count">0 items left</span>
